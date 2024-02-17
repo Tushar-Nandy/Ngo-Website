@@ -13,7 +13,7 @@ const Headernew = (props) => {
   return (
     <div className="headernew-container">
       <header  data-thq="thq-navbar" className="headernew-navbar-interactive">
-      <div onClick={()=>history.push("/")}>
+      <div onClick={()=>history.push("/Ngo-Website")}>
         <Player
           
           src="https://presentation-website-assets.teleporthq.io/features/lottie.json"
