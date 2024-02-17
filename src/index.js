@@ -6,6 +6,7 @@ import {
   Switch,
   Redirect,
 } from 'react-router-dom'
+import { createRoot } from 'react-dom/client';
 
 import './style.css'
 import Home from './views/home'
@@ -21,7 +22,7 @@ const App = () => {
     <Router>
     <Header/>
       <Switch>
-        <Route component={Home} exact path="/" />
+        <Route component={Home} exact path="/Ngo-Website" />
         <Route component={Contact} exact path="/contact" />
         <Route component={About} exact path="/about" />
         <Route component={Donation} exact path="/donation" />
@@ -33,4 +34,13 @@ const App = () => {
   )
 }
 
-ReactDOM.render(<App />, document.getElementById('app'))
+document.addEventListener("DOMContentLoaded", function() {
+  const container = document.getElementById('app');
+  if (container) {
+    const root = createRoot(container);
+    root.render(<App />);
+  } else {
+    console.error("Element with id 'app' not found");
+  }
+});
+export default App
