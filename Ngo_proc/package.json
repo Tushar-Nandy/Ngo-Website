@@ -2,6 +2,7 @@
   "name": "agitated-brisk-chicken",
   "version": "1.0.0",
   "private": true,
+  "homepage": "https://The13bit.github.io/Ngo-Website",
   "dependencies": {
     "@craco/craco": "^5.9.0",
     "@lottiefiles/react-lottie-player": "3.4.7",
@@ -19,6 +20,8 @@
     "postcss":"8.4.32"
   },
   "scripts": {
+    "predeploy": "npm run build",
+"deploy": "gh-pages -d build",
     "start": "craco start",
     "build": "craco build",
     "test": "craco test --env=jsdom",
